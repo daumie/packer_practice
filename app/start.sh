@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-sudo apt-get update && sudo apt-get install python-pip
-pip install flask
-python app.py
+sudo apt update &&  sudo apt install -y python3 && sudo apt install -y python3-pip  && sudo apt -y autoremove && pip3 install flask && python3 ~/app/app.py &
+echo "Done Creating Instance"

@@ -7,7 +7,7 @@
     {
       "type": "googlecompute",
       "disk_size": 10,
-      "image_name": "bionic_beaver_flask",
+      "image_name": "bionic-beaver-flask-hello",
       "image_description": "Ubuntu image with Flask Hello World Application",
       "account_file": "{{user `gcloud_access_json_key`}}",
       "project_id": "assessment-demo-andela",
@@ -22,19 +22,19 @@
   "provisioners": [
     {
       "type": "shell-local",
-      "command": "mkdir app"
+      "command": "mkdir -p ~/app"
     },
 
     {
       "type": "file",
       "source": "{{user `packer_test_flask_app`}}",
-      "destination": "/app",
+      "destination": "~/app",
       "direction": "upload"
     },
 
     {
       "type": "shell",
-      "inline": ["sudo chmod +x ../app/start.sh && ./../app/start.sh"]
+      "inline": ["sudo chmod +x ~/app/start.sh && bash ~/app/start.sh"]
     }
   ]
 }
