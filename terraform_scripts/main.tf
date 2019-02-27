@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "${file("${var.gcloud_service_key}")}",
-  project = "assessment-demo-andela",
-  region = "europe-west2"
+  credentials = "${file("${var.gcloud_service_key}")}"
+  project     = "assessment-demo-andela"
+  region      = "europe-west2"
 }
