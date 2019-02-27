@@ -12,7 +12,7 @@ resource "google_compute_instance" "ubuntuflaskapp-instance" {
   }
 
   network_interface {
-    network = "${google_compute_network.assessment-network.name}"
+    network = "${google_compute_network.kachumbari-network.name}"
 
     access_config = {
       nat_ip       = ""
@@ -33,7 +33,7 @@ resource "google_compute_instance" "ubuntuflaskapp-instance" {
 
 resource "google_compute_firewall" "assessment_instance_firewall" {
   name    = "assessment-instance-firewall"
-  network = "${google_compute_network.assessment-network.name}"
+  network = "${google_compute_network.kachumbari-network.name}"
 
   allow {
     protocol = "tcp"
