@@ -38,3 +38,5 @@ pip-log.txt
 venv
 *.pyc
 build
+
+__pycache__/
