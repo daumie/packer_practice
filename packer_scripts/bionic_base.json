@@ -7,7 +7,7 @@
     {
       "type": "googlecompute",
       "disk_size": 10,
-      "image_name": "githeri",
+      "image_name": "kachumbari",
       "image_description": "Ubuntu image with Flask Hello World Application",
       "account_file": "{{user `gcloud_access_json_key`}}",
       "project_id": "assessment-demo-andela",
